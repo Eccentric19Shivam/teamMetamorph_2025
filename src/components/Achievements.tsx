@@ -21,7 +21,7 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
           
           <img 
-            src="/public/image/2k23.png"
+            src="/image/2k23.png"
             alt="Marshalling Team 2023"
             className="w-full h-[400px] object-cover object-center rounded-2xl"
           />
@@ -47,7 +47,7 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
           
           <img 
-            src="/public/image/2k24.png"
+            src="/image/2k24.png"
             alt="Innovative Team 2024"
             className="w-full h-[400px] object-cover object-center rounded-2xl"
           />
