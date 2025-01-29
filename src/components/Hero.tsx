@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <div className="animate-float">
           <img 
-            src="./assets/logo.png" 
+            src="/public/logo.png" 
             alt="Team Metamorph Logo" 
             className="h-32 w-auto mx-auto mb-8"
           />

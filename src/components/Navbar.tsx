@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img
-                src="./assets/logo.png" 
+                src="/public/logo.png" 
                 alt="Team Metamorph Logo" 
                 className="h-10 w-auto"
               />
