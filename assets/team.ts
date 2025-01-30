@@ -1,4 +1,4 @@
-[
+export const teamData =[
  {
    "Name": "Nischey Karol",
    "Post": "Club Coordinator",
@@ -207,7 +207,7 @@
    "insta url": ""
  },
  {
-   "Name": "kishan raj",
+   "Name": "Kishan Raj",
    "Post": "Volunteer",
    "Roll no.": "24BMS031",
    "png format pic": "https://drive.google.com/file/d/1ACQaukTTrAGRE5SMoOSRuMHW6Y8jgETS/view?usp=drivesdk",

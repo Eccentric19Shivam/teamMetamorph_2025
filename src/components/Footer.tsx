@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="./assets/logo.png"
+                src="/logo.png"
                 alt="Team Metamorph Logo" 
                 className="h-8 w-auto"
               />
@@ -42,15 +42,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Nimbus</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Research Papers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Projects</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gallery</a></li>
-            </ul>
-          </div>
+         
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
