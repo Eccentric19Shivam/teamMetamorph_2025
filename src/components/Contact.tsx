@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
               <Mail className="h-6 w-6 text-blue-500 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <p className="text-gray-400">clubmetamorph@nith.ac.in</p>
+                <p className="text-gray-400">metamorph.nimbus@nith.ac.in</p>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
               <Phone className="h-6 w-6 text-blue-500 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                <p className="text-gray-400">+91 1234567890</p>
+                <p className="text-gray-400">+91 9816276738 / +91 9571763604</p>
               </div>
             </div>
           </div>

@@ -8,7 +8,10 @@ function App() {
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
           Our Achievements
         </h1>
+        <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+
+          
           Through dedication, innovation, and teamwork, we've reached remarkable milestones. 
           Each achievement reflects our commitment to excellence and our passion for pushing boundaries.
         </p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <a href="#team" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
                 <a href="#events" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Events</a>
                 <a href="#achievements" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Achievements</a>
-                <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
             <a href="#team" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
             <a href="#events" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Events</a>
             <a href="#achievements" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Achievements</a>
-            <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <a href="#contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
           </div>
         </div>
       )}

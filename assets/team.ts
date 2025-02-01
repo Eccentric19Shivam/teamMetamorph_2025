@@ -45,7 +45,7 @@ export const teamData =[
    "insta url": "https://www.instagram.com/amayush__/profilecard/?igsh=MTdvNW5tZ2RsdTF3bg=="
  },
  {
-   "Name": "Devansh negi",
+   "Name": "Devansh Negi",
    "Post": "Executive Member",
    "Roll no.": "23BMS013",
    "png format pic": "members/2nd_year/devansh2.png",
@@ -58,7 +58,7 @@ export const teamData =[
    "Post": "Executive Member",
    "Roll no.": "23BMS020",
    "png format pic": "members/2nd_year/arshad2.png",
-   "life motto": "Jaat Buddhi ",
+   "life motto": "The thing you are fearing of, is where the rest of you lies.",
    "linked in url": "#home",
    "insta url": "#home"
  },
@@ -243,7 +243,7 @@ export const teamData =[
    "insta url": "https://www.instagram.com/umang_.gautam?utm_source=qr&igsh=cmQ1OXJiazRycjgy"
  },
  {
-   "Name": "Abha acharya",
+   "Name": "Abha Acharya",
    "Post": "Volunteer",
    "Roll no.": "24BMS001",
    "png format pic": "members/1st_year/abha1.jpg",
@@ -251,15 +251,7 @@ export const teamData =[
    "linked in url": "https://www.linkedin.com/in/aabha-acharya-b70a96323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
    "insta url": "https://www.instagram.com/abhaacharyaa?igsh=MXJzZXJzZnNtOHE5ZA=="
  },
- {
-   "Name": "Ajay Singh ",
-   "Post": "Volunteer",
-   "Roll no.": "24BMS002",
-   "png format pic": "members/1st_year/ajay1.png",
-   "life motto": "Consistency is the key.",
-   "linked in url": "#home",
-   "insta url": "https://www.instagram.com/ajaysingh_22_?igsh=YzljYTk1ODg3Zg=="
- },
+ 
  {
    "Name": "Arpit Kumar ",
    "Post": "Volunteer",

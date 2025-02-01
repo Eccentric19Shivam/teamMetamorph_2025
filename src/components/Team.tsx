@@ -31,7 +31,7 @@ function Team() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-12 px-4">
+    <div id="team" className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-12 px-4">
       <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Team</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
