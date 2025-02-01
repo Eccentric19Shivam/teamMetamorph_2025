@@ -19,7 +19,7 @@ export const teamData =[
  },
  {
    "Name": "Arjun Dhania",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS006",
    "png format pic": "members/2nd_year/arjun2.png",
    "life motto": "Do not go gentle into that good night.",
@@ -28,7 +28,7 @@ export const teamData =[
  },
  {
    "Name": "Aryan",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS007",
    "png format pic": "members/2nd_year/aryan2.png",
    "life motto": "He who conquers himself is the mightiest warrior",
@@ -37,7 +37,7 @@ export const teamData =[
  },
  {
    "Name": "Ayush Verma",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS009",
    "png format pic": "members/2nd_year/ayush2.jpg",
    "life motto": "Fostering peace through sustainable wealth.",
@@ -46,7 +46,7 @@ export const teamData =[
  },
  {
    "Name": "Devansh negi",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS013",
    "png format pic": "members/2nd_year/devansh2.png",
    "life motto": "To strive,to seek,to find and not to yield.",
@@ -55,7 +55,7 @@ export const teamData =[
  },
  {
    "Name": "Arshad Khan",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS020",
    "png format pic": "members/2nd_year/arshad2.png",
    "life motto": "Jaat Buddhi ",
@@ -64,7 +64,7 @@ export const teamData =[
  },
  {
    "Name": "Ruchika",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS030",
    "png format pic": "members/2nd_year/ruchika2.png",
    "life motto": "Being happy for what i have,while working on what i want",
@@ -73,7 +73,7 @@ export const teamData =[
  },
  {
    "Name": "Sareha",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS034",
    "png format pic": "members/2nd_year/sareha2.jpg",
    "life motto": "Forge ahead, no matter the pressure",
@@ -82,7 +82,7 @@ export const teamData =[
  },
  {
    "Name": "Sarika yadav",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS035",
    "png format pic": "members/2nd_year/sarika2.jpg",
    "life motto": "Be grateful",
@@ -91,7 +91,7 @@ export const teamData =[
  },
  {
    "Name": "Suffan Preet Kaur",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS037",
    "png format pic": "members/2nd_year/suffan2.jpg",
    "life motto": "This too shall pass ",
@@ -100,7 +100,7 @@ export const teamData =[
  },
  {
    "Name": "Tanishq Parashar",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS039",
    "png format pic": "members/2nd_year/tanishq2.png",
    "life motto": "Learn, connect, and innovate to grow.",
@@ -109,7 +109,7 @@ export const teamData =[
  },
  {
    "Name": "Bukka Sumith Chandra Nag",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS011",
    "png format pic": "members/2nd_year/sumith2.png",
    "life motto": "Think exceptional and implement it!",
@@ -118,7 +118,7 @@ export const teamData =[
  },
  {
    "Name": "Sagar Baddhan",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BMS031",
    "png format pic": "members/2nd_year/sagar2.png",
    "life motto": "Don't bother to be better than others. Try to be better than yourself.",
@@ -127,7 +127,7 @@ export const teamData =[
  },
  {
    "Name": "Priyanshu Chaudhary",
-   "Post": "Executive",
+   "Post": "Executive Member",
    "Roll no.": "23BME076",
    "png format pic": "members/2nd_year/priyanshu2.png",
    "life motto": "Once you decided then never go back",
