@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Linkedin, Instagram } from 'lucide-react';
+import { Linkedin, Instagram, X } from 'lucide-react';
 import { teamData } from '../../assets/team';
 
 function Team() {
@@ -67,6 +67,17 @@ function Team() {
             transition={{
               duration: 0.7,
               ease: "easeInOut"
+            }}
+            drag="x"
+            dragConstraints={{ left: -1000, right: 0 }}
+            dragElastic={0.1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = offset.x;
+              if (swipe < -50) {
+                setCurrentIndex((prev) => Math.min(prev + 1, teamData.length - 1));
+              } else if (swipe > 50) {
+                setCurrentIndex((prev) => Math.max(prev - 1, 0));
+              }
             }}
           >
             {teamData.map((member, index) => (
