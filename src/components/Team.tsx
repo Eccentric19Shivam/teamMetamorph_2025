@@ -1,26 +1,20 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Linkedin, Instagram, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Linkedin, Instagram } from 'lucide-react';
 import { teamData } from '../../assets/team';
 
 function Team() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState<number | null>(null);
-  const [isZoomed, setIsZoomed] = useState(false);
-  const [scale, setScale] = useState(1);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const constraintsRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (!isZoomed) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % teamData.length);
-      }
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % teamData.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [isZoomed]);
+  }, []);
 
   const cardsPerView = {
     sm: 1,
@@ -31,33 +25,19 @@ function Team() {
 
   const handleCardInteraction = (index: number) => {
     if (window.matchMedia('(hover: none)').matches) {
+      // For touch devices
       setSelectedCard(selectedCard === index ? null : index);
-      setIsZoomed(false);
-      setScale(1);
-      setPosition({ x: 0, y: 0 });
     }
-  };
-
-  const handleImageClick = (index: number) => {
-    if (window.matchMedia('(hover: none)').matches) {
-      setIsZoomed(!isZoomed);
-      setSelectedCard(index);
-    }
-  };
-
-  const closeZoom = () => {
-    setIsZoomed(false);
-    setScale(1);
-    setPosition({ x: 0, y: 0 });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-12 px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Team</h2>
-        <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
-      </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Team</h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+        </div>
       <div className="max-w-7xl mx-auto">
+        
         <div className="overflow-hidden relative">
           <motion.div
             className="flex gap-6"
@@ -67,17 +47,6 @@ function Team() {
             transition={{
               duration: 0.7,
               ease: "easeInOut"
-            }}
-            drag="x"
-            dragConstraints={{ left: -1000, right: 0 }}
-            dragElastic={0.1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = offset.x;
-              if (swipe < -50) {
-                setCurrentIndex((prev) => Math.min(prev + 1, teamData.length - 1));
-              } else if (swipe > 50) {
-                setCurrentIndex((prev) => Math.max(prev - 1, 0));
-              }
             }}
           >
             {teamData.map((member, index) => (
@@ -99,7 +68,8 @@ function Team() {
                   <div className="relative">
                     <motion.div
                       className="aspect-[4/5] relative overflow-hidden"
-                      onClick={() => handleImageClick(index)}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
                     >
                       <img
                         src={member["png format pic"].replace('https://drive.google.com/file/d/', 'https://drive.google.com/uc?export=view&id=').replace('/view?usp=drivesdk', '')}
@@ -191,60 +161,6 @@ function Team() {
           ))}
         </div>
       </div>
-
-      <AnimatePresence>
-        {isZoomed && selectedCard !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
-            onClick={closeZoom}
-          >
-            <motion.button
-              className="absolute top-4 right-4 text-white p-2"
-              onClick={closeZoom}
-            >
-              <X className="w-6 h-6" />
-            </motion.button>
-            
-            <div className="w-full h-full" ref={constraintsRef}>
-              <motion.div
-                className="w-full h-full flex items-center justify-center"
-                drag
-                dragConstraints={constraintsRef}
-                dragElastic={0.1}
-                dragMomentum={false}
-              >
-                <motion.img
-                  src={teamData[selectedCard]["png format pic"].replace('https://drive.google.com/file/d/', 'https://drive.google.com/uc?export=view&id=').replace('/view?usp=drivesdk', '')}
-                  alt={teamData[selectedCard].Name}
-                  className="max-w-full max-h-full object-contain"
-                  style={{
-                    scale,
-                    x: position.x,
-                    y: position.y,
-                    cursor: isZoomed ? "grab" : "auto"
-                  }}
-                  drag
-                  dragConstraints={constraintsRef}
-                  onPan={(e, info) => {
-                    setPosition({
-                      x: position.x + info.delta.x,
-                      y: position.y + info.delta.y
-                    });
-                  }}
-                  onPinch={(e, info) => {
-                    const newScale = scale * info.scale;
-                    setScale(Math.min(Math.max(1, newScale), 3));
-                  }}
-                  onClick={(e) => e.stopPropagation()}
-                />
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
