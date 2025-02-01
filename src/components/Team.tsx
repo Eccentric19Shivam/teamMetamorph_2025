@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Linkedin, Instagram } from 'lucide-react';
 import { teamData } from '../../assets/team';
 
 function Team() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState<number | null>(null);
 
   useEffect(() => {
@@ -20,6 +21,13 @@ function Team() {
     md: 2,
     lg: 3,
     xl: 4
+  };
+
+  const handleCardInteraction = (index: number) => {
+    if (window.matchMedia('(hover: none)').matches) {
+      // For touch devices
+      setSelectedCard(selectedCard === index ? null : index);
+    }
   };
 
   return (
@@ -42,6 +50,7 @@ function Team() {
                 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0"
                 onHoverStart={() => setIsHovered(index)}
                 onHoverEnd={() => setIsHovered(null)}
+                onClick={() => handleCardInteraction(index)}
               >
                 <motion.div
                   className="bg-white rounded-xl overflow-hidden shadow-lg"
@@ -53,7 +62,7 @@ function Team() {
                 >
                   <div className="relative">
                     <motion.div
-                      className="aspect-[3/4] relative overflow-hidden"
+                      className="aspect-[4/5] relative overflow-hidden"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.4 }}
                     >
@@ -62,7 +71,7 @@ function Team() {
                         alt={member.Name}
                         className="w-full h-full object-cover"
                       />
-                      {isHovered === index && (
+                      {(isHovered === index || selectedCard === index) && (
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
@@ -98,11 +107,11 @@ function Team() {
                     </motion.div>
                   </div>
                   <div className="p-4">
-                    {isHovered === index ? (
+                    {(isHovered === index || selectedCard === index) ? (
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="space-y-3"
+                        className="space-y-2"
                       >
                         <p className="text-gray-600 italic text-sm">
                           "{member["life motto"]}"
