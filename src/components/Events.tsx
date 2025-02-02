@@ -2,45 +2,45 @@ function App() {
   const events = [
     {
       title: "Canva Workshop",
-      date: "Date: January 24, 2025",
+      date: " January 24, 2025",
       image: "/events/canva.jpg",
-      venue: "Venue: LH S3"
+      venue: " LH S3"
     },
     {
       title: "Tinkercad Workshop",
-      date: "Date: January 31, 2025",
+      date: " January 31, 2025",
       image: "/events/circuit.jpg",
-      venue : "Venue: LH S3"
+      venue : " LH S3"
     },
     {
       title: "Reaction Speed",
-      date: "Date: Innovission",
+      date: " Innovission",
       image: "/events/reaction.png",
-      venue: "Time: 12:00 PM onwards"
+      venue: " 12:00 PM onwards"
     },
     {
       title: "Lattice Race",
-      date: "Date: To be announced.",
+      date: " To be announced.",
       image: "/events/lattice.png",
-      venue: "Venue: To be announced."
+      venue: " To be announced."
     },
     {
       title: "Geo Guesser",
-      date: "Date: To be announced.",
+      date: " To be announced.",
       image: "/events/geo.jpg",
-      venue: "Venue: To be announced."
+      venue: " To be announced."
     },
     {
       title: "Guest Lecture",
-      date: "Date: To be announced.",
+      date: " To be announced.",
       image: "/events/guest.jpg",
-      venue: "Venue: To be announced."
+      venue: " To be announced."
     },
     {
       title: "Queen's Gambit",
-      date: "Date: To be announced.",
+      date: " To be announced.",
       image: "/events/quuen.png",
-      venue: "Venue: To be announced."
+      venue: " To be announced."
     }
   ];
 

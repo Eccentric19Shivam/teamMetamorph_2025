@@ -24,7 +24,7 @@ const Hero = () => {
         <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
           Team Metamorph
         </h1>
-        <p className="text-xl sm:text-2xl text-blue-400 font-semibold italic mb-8">
+        <p className="text-xl sm:text-2xl text-blue-600 font-semibold italic mb-8">
           "Where eccentricity personifies elegance"
         </p>
         <p className="text-white max-w-2xl mx-auto mb-12">

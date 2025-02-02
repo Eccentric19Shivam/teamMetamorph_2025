@@ -2,6 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Preloader animations */
+@keyframes rocketFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes particleFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes starZoom {
+  from {
+    transform: scale(1) translateZ(0);
+  }
+  to {
+    transform: scale(2) translateZ(0);
+    opacity: 0;
+  }
+}
+
+/* Preloader styles */
+.rocket-container {
+  position: relative;
+  animation: rocketFloat 2s ease-in-out infinite;
+}
+
+.rocket {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.rocket-trail {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  animation: particleFade 1s ease-out infinite;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 300px;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: starZoom 3s linear infinite;
+}
+
+/* Add glow effect to stars */
+.star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(1px);
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
