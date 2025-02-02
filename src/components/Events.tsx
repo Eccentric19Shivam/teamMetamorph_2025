@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Events = () => {
+function App() {
   const events = [
     {
       title: "Canva Workshop",
@@ -47,33 +45,45 @@ const Events = () => {
   ];
 
   return (
-    <section id="events" className="py-20 bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <div id= 'events' className="min-h-screen bg-gray-900 py-12 px-4">
+      <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Nimbus Events</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {events.map((event, index) => (
-            <div key={index} className="bg-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {events.map((event, index) => (
+          <div 
+            key={index}
+            className="group relative h-[400px] overflow-hidden rounded-2xl"
+          >
+            {/* Image with zoom effect */}
+            <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
               <img
                 src={event.image}
                 alt={event.title}
-                className="w-full h-48 object-cover"
+                className="h-full w-full object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
-                <p className="text-blue-400 mb-4">{event.date}</p>
-                <p className="text-gray-400 mb-6">{event.venue}</p>
-                
+            </div>
+            
+            {/* Overlay with details */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                  <h3 className="text-2xl font-bold text-white mb-2">{event.title}</h3>
+                  <p className="text-white/90 mb-1">
+                    <span className="text-blue-400">Date:</span> {event.date}
+                  </p>
+                  <p className="text-white/90">
+                    <span className="text-blue-400">Venue:</span> {event.venue}
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
-};
+}
 
-export default Events;
+export default App;

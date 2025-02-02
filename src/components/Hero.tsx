@@ -2,12 +2,12 @@
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background with hexagonal grid */}
+      {/* Video background */}
       <video
         autoPlay
         loop
         muted
-        className='absolute top-0 left-0 w-full h-full object-cover'
+        className='absolute top-0 left-0 w-full h-full object-cover md:object-fill lg:object-cover min-w-full min-h-full max-w-none'
       >
         <source src='/HeroBg.mp4' type='video/mp4'/>
       </video>
