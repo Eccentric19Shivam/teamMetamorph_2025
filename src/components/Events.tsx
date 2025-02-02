@@ -3,22 +3,46 @@ import React from 'react';
 const Events = () => {
   const events = [
     {
-      title: "Material Testing Competition",
-      date: "March 25, 2024",
-      image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80",
-      description: "Test your knowledge of material properties and analysis techniques."
+      title: "Canva Workshop",
+      date: "Date: January 24, 2025",
+      image: "/events/canva.jpg",
+      venue: "Venue: LH S3"
     },
     {
-      title: "Advanced Composites Workshop",
-      date: "March 26, 2024",
-      image: "https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?auto=format&fit=crop&q=80",
-      description: "Hands-on workshop on composite materials and their applications."
+      title: "Tinkercad Workshop",
+      date: "Date: January 31, 2025",
+      image: "/events/circuit.jpg",
+      venue : "Venue: LH S3"
     },
     {
-      title: "Innovation Challenge",
-      date: "March 27, 2024",
-      image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80",
-      description: "Present your innovative solutions to real-world material science challenges."
+      title: "Reaction Speed",
+      date: "Date: Innovission",
+      image: "/events/reaction.png",
+      venue: "Time: 12:00 PM onwards"
+    },
+    {
+      title: "Lattice Race",
+      date: "Date: To be announced.",
+      image: "/events/lattice.png",
+      venue: "Venue: To be announced."
+    },
+    {
+      title: "Geo Guesser",
+      date: "Date: To be announced.",
+      image: "/events/geo.jpg",
+      venue: "Venue: To be announced."
+    },
+    {
+      title: "Guest Lecture",
+      date: "Date: To be announced.",
+      image: "/events/guest.jpg",
+      venue: "Venue: To be announced."
+    },
+    {
+      title: "Queen's Gambit",
+      date: "Date: To be announced.",
+      image: "/events/quuen.png",
+      venue: "Venue: To be announced."
     }
   ];
 
@@ -41,10 +65,8 @@ const Events = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                 <p className="text-blue-400 mb-4">{event.date}</p>
-                <p className="text-gray-400 mb-6">{event.description}</p>
-                <button className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                  Register Now
-                </button>
+                <p className="text-gray-400 mb-6">{event.venue}</p>
+                
               </div>
             </div>
           ))}
